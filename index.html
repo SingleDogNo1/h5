@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>老铁？谈钱试试？</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <!--<meta name="viewport"-->
+          <!--content="width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
+    <!-- js -->
+     <script type="text/javascript">
+       if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+         var version = parseFloat(RegExp.$1);
+         if (version > 2.3) {
+           var phoneScale = parseInt(window.screen.width) / 750;
+           document.write('<meta name="viewport" content="width=750,minimum-scale=' + phoneScale + ',maximum-scale=' + phoneScale + ',target-densitydpi=device-dpi">')
+         } else {
+           document.write('<meta name="viewport" content="width=750,target-densitydpi=device-dpi">')
+         }
+       } else {
+         document.write('<meta name="viewport" content="width=device-width,user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+       }
+     </script>
+    <script src="js/jquery.js"></script>
+    <script src="js/rem.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+
+
+<video id="music" style="display: none;" src="media/music.mp3" ></video>
+<video id="okobo" style="display: none;" src="media/okobo.wav"></video>
+<div id="swiper" class="swiper-container">
+    <div class="swiper-wrapper">
+        <!-- navigation -->
+        <div class="swiper-slide one stop-swiping">
+            <div class="tag tag1"><img class="swiper-lazy" data-src="images/tag1.png" alt=""></div>
+            <div class="tag tag2"><img class="swiper-lazy" data-src="images/tag2.png" alt=""></div>
+            <div class="tag tag3"><img class="swiper-lazy" data-src="images/tag3.png" alt=""></div>
+            <div class="tag tag4"><img class="swiper-lazy" data-src="images/tag4.png" alt=""></div>
+            <div class="next"></div>
+        </div>
+
+        <div class="swiper-slide two stop-swiping">
+            <div class="scene scene-1">
+                <div class="sound"></div>
+                <div class="bg"></div>
+                <div class="word-wrapper-1 initword">
+                    <span>帮</span><span>我</span><span>点</span><span>个</span><span>名</span><span>吧</span>
+                </div>
+                <div class="word-wrapper-2">
+                    <span>没</span><span>问</span><span>题</span><span>啊</span><span>对</span><span>了</span><span>，</span><span>能</span><span>借</span><span>我</span><span>点</span><span>钱</span><span>吗</span><span>？</span><span>下</span><span>个</span><span>月</span><span>还</span><span>你</span>
+                </div>
+            </div>
+            <div class="scene scene-2 hide">
+                <div class="sound"></div>
+                <div class="bg"></div>
+            </div>
+            <div class="scene scene-3 hide">
+                <div class="bg"></div>
+                <div class="logo"></div>
+            </div>
+            <div class="button-wrapper">
+                <button  class="button" onclick="sendStatistics({umeng_type:'同学',talking_id: 'activities'})">向TA借钱</button>
+                <div class="msg-wrapper">大家都是穷学生<br>我要回家问妈妈</div>
+                <div class="fail-msg">一年零三天感情，&nbsp;卒</div>
+            </div>
+            <div class="nextpage"></div>
+        </div>
+
+        <div class="swiper-slide three stop-swiping">
+            <div class="scene scene-1">
+                <div class="sound"></div>
+                <div class="bg">
+                    <img class="first swiper-lazy" data-src="images/scene2-bg-03.png" alt="">
+                    <img class="second swiper-lazy" data-src="images/bg.png" alt="">
+                </div>
+                <div class="star star1"></div>
+                <div class="star star2"></div>
+                <div class="heart"></div>
+                <div class="word-wrapper-2">
+                    <span>宝</span><span>贝</span><span>儿</span><span>，</span><span>借</span><span>点</span><span>钱</span><span>呗</span>
+                </div>
+            </div>
+            <div class="scene scene-2 hide">
+                <div class="sound"></div>
+                <div class="bg"></div>
+                <div class="heart"></div>
+            </div>
+            <div class="scene scene-3 hide">
+                <div class="bg"></div>
+                <div class="logo"></div>
+            </div>
+            <div class="button-wrapper">
+                <button class="button" onclick="sendStatistics({umeng_type:'爱人',talking_id: 'activities'})">向TA借钱</button>
+                <div class="msg-wrapper">亲爱的，我人是你的，<br>但钱还是我的..</div>
+                <div class="fail-msg">一年零三个月的小恩爱，&nbsp;卒</div>
+            </div>
+            <div class="nextpage"></div>
+        </div>
+
+        <div class="swiper-slide four stop-swiping">
+            <div class="scene scene-1">
+                <div class="sound"></div>
+                <div class="bg"></div>
+                <div class="cup"></div>
+                <div class="word-wrapper-1 left initword">
+                    <span>这</span><span>杯</span><span>我</span><span>干</span><span>了</span>
+                </div>
+                <div class="word-wrapper-1 right next">
+                    <span>干</span><span>了</span><span>！</span>
+                </div>
+                <div class="word-wrapper-2">
+                    <span>兄</span><span>弟</span><span>和</span><span>你</span><span>商</span><span>量</span><span>件</span><span>事</span>
+                </div>
+            </div>
+            <div class="scene scene-2 hide">
+                <div class="sound"></div>
+                <div class="bg"></div>
+                <div class="cup"></div>
+            </div>
+            <div class="scene scene-3 hide">
+                <div class="bg"></div>
+                <div class="logo"></div>
+            </div>
+            <div class="button-wrapper">
+                <button class="button" onclick="sendStatistics({umeng_type:'兄弟',talking_id: 'activities'})">向TA借钱</button>
+                <div class="msg-wrapper">兄弟可以为你俩肋插刀<br>但一谈钱还是有点心慌</div>
+                <div class="fail-msg">5年兄弟情，&nbsp;卒</div>
+            </div>
+            <div class="nextpage"></div>
+        </div>
+
+        <div class="swiper-slide five stop-swiping">
+            <div class="scene scene-1">
+                <div class="sound"></div>
+                <div class="bg"></div>
+                <div class="word-wrapper-1 right initword">
+                    <span>您</span><span>挺</span><span>好</span><span>的</span><span>？</span>
+                </div>
+                <div class="word-wrapper-1 left next">
+                    <span>挺</span><span>好</span><span>的</span><span>...</span>
+                </div>
+            </div>
+            <div class="scene scene-2 hide">
+                <div class="sound"></div>
+                <div class="bg"></div>
+                <div class="word-wrapper-2 init right">
+                    <span>手</span><span>头</span><span>有</span><span>点</span><span>紧</span><span>...</span>
+                </div>
+                <div class="word-wrapper-2 next left">
+                    <span>股</span><span>票</span><span>不</span><span>景</span><span>气</span><span>...</span>
+                </div>
+            </div>
+            <div class="scene scene-3 hide">
+                <div class="bg"></div>
+                <div class="logo"></div>
+            </div>
+            <div class="button-wrapper">
+                <button class="button" onclick="sendStatistics({umeng_type:'亲人',talking_id: 'activities'})">向TA借钱</button>
+                <div class="msg-wrapper">生活都不容易，&nbsp;且借且珍惜</div>
+                <div class="fail-msg">20年亲戚感情，&nbsp;卒</div>
+            </div>
+            <div class="nextpage"></div>
+        </div>
+
+        <div class="swiper-slide six stop-swiping">
+            <div class="sound"></div>
+            <div class="ewm-wrapper floor">
+                <h1>相比他们，我们更信任你</h1>
+                <img class="swiper-lazy" data-src="images/ewm.jpg" alt="">
+                <p>磐多拉信用</p>
+            </div>
+            <div class="take floor"><a href="http://pandoracredit.cn/h5_index.html">进入领钱</a></div>
+            <div class="wilful floor">我才不缺钱</div>
+
+
+            <div class="dir_wrap ani">
+                <div class="dir_before"></div>
+                <div class="dir_font">
+                    <p class="share">你敢和他们提钱吗？</p>
+                    <p class="share">考验亲情、友情、爱情的时候到了，</p>
+                    <p class="weiguan">分享给他们看看吧！</p>
+                </div>
+                <img class="dir_img swiper-lazy" data-src="images/dir_share.png"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+</script>
+<div style="display: none;">
+    <script type="text/javascript">
+        var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");
+        document.write(unescape("%3Cspan id='cnzz_stat_icon_1263215243'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/z_stat.php%3Fid%3D1263215243' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</div>
+<script src="js/website_statistics.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+首页： 无
+场景一： 右边对话框 == > 调整字号？？
+场景二： 背景旋转、场景切换心做成gif图  lineheight 0.6
+场景三： before  left：lineheight 0.6   right：0.6   after  lineheight 0.62
+场景四：before   left:lineheught 0.6     right  0.62   after   left   0.62  right  0.62
+结尾页：
