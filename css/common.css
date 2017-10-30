@@ -33,6 +33,11 @@ a,a:link,a:focus,a:active{
     color:#333333;
 }
 
+button:link,button:active,button:focus{
+    outline:none;
+    border:none;
+}
+
 .hide {
     display: none !important;
 
@@ -96,6 +101,15 @@ a,a:link,a:focus,a:active{
 }
 
 @keyframes rotate {
+    0%{
+        transform:rotate(0)
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes rotate {
     0%{
         transform:rotate(0)
     }

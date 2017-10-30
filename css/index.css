@@ -348,9 +348,9 @@
     margin-top: -8.97rem;
     width:13.14rem;
     height:17.94rem;
-    animation: rotate 10s linear infinite both;
-    -webkit-animation: rotate 10s linear infinite both;
-    -o-animation: rotate 10s linear infinite both;
+    animation: rotate 18s linear infinite both;
+    -webkit-animation: rotate 18s linear infinite both;
+    -o-animation: rotate 18s linear infinite both;
 }
 .three .scene-2 .bg {
     background-image: url("../images/scene2-02.png");
@@ -423,10 +423,19 @@
 .four .scene-2 .bg {
     background-image: url("../images/scene3-02.png");
 }
+.four .scene-2 .water{
+    background-image: url("../images/water.png");
+    position: absolute;
+    top: 5.1rem;
+    left: 4.15rem;
+    width:.12rem;
+    height:0.37rem;
+    opacity:0;
+}
 
 .four .word-wrapper-1.left {
     top: 3rem;
-    left: 1.1rem;
+    left: 1.3rem;
     width: 2.05rem;
     height: 0.74rem;
     line-height: 0.6rem;
@@ -435,7 +444,7 @@
 
 .four .word-wrapper-1.right {
     top: 2.9rem;
-    left: 4.4rem;
+    left: 4.2rem;
     width: 1.97rem;
     height: 0.81rem;
     line-height: 0.62rem;
@@ -458,7 +467,7 @@
     left: 1rem;
     width: 3.31rem;
     height: 0.74rem;
-    line-height: 0.62rem;
+    line-height: 0.6rem;
     background-image: url("../images/scene3-word-bg-03.png");
     -webkit-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
@@ -553,7 +562,7 @@
     left: 0.48rem;
     width: 2.76rem;
     height: 0.77rem;
-    line-height: 0.62rem;
+    line-height: 0.58rem;
     background-image: url("../images/scene4-word-bg-03.png");
     -webkit-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
@@ -585,17 +594,25 @@
     background-size: cover;
 }
 
-.six .sound {
+.six .wrapper{
+    position: relative;
+    z-index: 1;
+    width:100%;
+    height:100%;
+    padding-top: 0.8rem;
+}
+
+.six .wrapper .sound {
     right: 0.35rem;
     top: 10px;
 }
 
-.six .ewm-wrapper {
+.six .wrapper .ewm-wrapper {
     background: url("../images/ewm-top.png") no-repeat;
     background-size: contain;
     width: 5.56rem;
     height: 7.1rem;
-    margin: 0.8rem auto 0.54rem;
+    margin: 0 auto 0.54rem;
     padding-top: 1.4rem;
     -webkit-transform: translateY(200%);
     -moz-transform: translateY(200%);
@@ -604,27 +621,27 @@
     transform: translateY(200%);
 }
 
-.six .ewm-wrapper h1 {
+.six .wrapper .ewm-wrapper h1 {
     font-size: 0.4rem;
     text-align: center;
     line-height: 1.9rem;
 }
 
-.six .ewm-wrapper img {
+.six .wrapper .ewm-wrapper img {
     width: 2.25rem;
     height: 2.25rem;
     display: block;
     margin: 0 auto;
 }
 
-.six .ewm-wrapper p {
+.six .wrapper .ewm-wrapper p {
     font-size: 0.36rem;
     text-align: center;
     line-height: 1.2rem;
     font-weight: normal;
 }
 
-.six .take {
+.six .wrapper .take {
     width: 6.92rem;
     height: 1.09rem;
     margin: 0 auto 0.3rem;
@@ -640,13 +657,13 @@
     -o-transform: translateY(2000%);
     transform: translateY(2000%);
 }
-.six .take a{
+.six .wrapper .take a{
     display: block;
     color:#fff;
     height:100%;
 }
 
-.six .wilful {
+.six .wrapper .wilful {
     width: 6.92rem;
     height: 1.09rem;
     margin: 0 auto;
@@ -664,7 +681,8 @@
 }
 
 .dir_wrap {
-    bottom: -20px;
+    background: #000;
+    bottom: -5px;
     right: 0;
     top: 0;
     left: 0;
@@ -672,17 +690,6 @@
     z-index: 9999;
     opacity: 0;
     display: none;
-}
-
-.dir_wrap::before {
-    bottom: 0;
-    right: 0;
-    top: 0;
-    left: 0;
-    content: "";
-    position: absolute;
-    background: black;
-    opacity: 0.9;
 }
 
 .dir_font {

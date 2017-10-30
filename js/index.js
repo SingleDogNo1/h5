@@ -66,8 +66,10 @@ $(function () {
                         link: 'http://h5.dpandora.cn/index.html',
                         imgUrl: 'http://h5.dpandora.cn/images/credit-share-icon.png',
                         title: '老铁是不是真的铁，来模拟借次钱就知道了 ',
-                        success: function () {},
-                        cancel: function () {}
+                        success: function () {
+                        },
+                        cancel: function () {
+                        }
                     });
                     wx.onMenuShareAppMessage({
                         link: 'http://h5.dpandora.cn/index.html',
@@ -75,35 +77,44 @@ $(function () {
                         title: '老铁是不是真的铁，来模拟借次钱就知道了 ',
                         type: '',
                         dataUrl: '',
-                        success: function () {},
-                        cancel: function () {}
+                        success: function () {
+                        },
+                        cancel: function () {
+                        }
                     });
                     wx.onMenuShareQQ({
                         link: 'http://h5.dpandora.cn/index.html',
                         imgUrl: 'http://h5.dpandora.cn/images/credit-share-icon.png',
                         title: '老铁是不是真的铁，来模拟借次钱就知道了 ',
-                        success: function () {},
-                        cancel: function () {}
+                        success: function () {
+                        },
+                        cancel: function () {
+                        }
                     });
                     wx.onMenuShareWeibo({
                         link: 'http://h5.dpandora.cn/index.html',
                         imgUrl: 'http://h5.dpandora.cn/images/credit-share-icon.png',
                         title: '老铁是不是真的铁，来模拟借次钱就知道了 ',
-                        success: function () {},
-                        cancel: function () {}
+                        success: function () {
+                        },
+                        cancel: function () {
+                        }
                     });
                     wx.onMenuShareQZone({
                         link: 'http://h5.dpandora.cn/index.html',
                         imgUrl: 'http://h5.dpandora.cn/images/credit-share-icon.png',
                         title: '老铁是不是真的铁，来模拟借次钱就知道了 ',
                         desc: '老铁是不是真的铁，来模拟借次钱就知道了 ',
-                        success: function () {},
-                        cancel: function () {}
+                        success: function () {
+                        },
+                        cancel: function () {
+                        }
                     });
                 });
             }
         });
     }
+
     if ((browser.versions.weixin)) {
         share()
     }
@@ -137,7 +148,7 @@ $(function () {
                     }, 150 * (i + 1))
                 })
             }, 300);
-            if (index !== 4) {
+            if (index !== 4 && index !== 3) {
                 setTimeout(function () {
                     $('.swiper-slide').eq(index).find('.button-wrapper').addClass('active');
                     $('.swiper-slide').eq(index).find('.button-wrapper .button').on('click', function () {
@@ -155,30 +166,30 @@ $(function () {
                         setTimeout(function () {
                             $this.siblings('.scene-2').removeClass('hide').addClass('animated fadeIn')
                         }, 4000);
-                        setTimeout(function () {
-                            $this.find('.button').animate({opacity: 0}, 300);
-                            setTimeout(function () {
-                                $this.find('.msg-wrapper').animate({opacity: 1, zIndex: 99}, 300)
-                            }, 600)
-                        }, 5000);
-                        setTimeout(function () {
-                            $this.find('.msg-wrapper').animate({opacity: 0, zIndex: 0});
-                            setTimeout(function () {
-                                $this.find('.fail-msg').animate({opacity: 1, zIndex: 99})
-                            }, 1000)
-                        }, 8000);
-                        setTimeout(function () {
-                            var scene3 = $this.siblings('.scene-3');
-                            scene3.removeClass('hide').addClass('animated fadeIn');
-                            setTimeout(function () {
-                                scene3.find('.logo').addClass('go');
-                                sound.play();
-                                setTimeout(function () {
-                                    $this.parent().find('.nextpage').css({display: 'block'});
-                                    flag = true
-                                }, 400)
-                            }, 700)
-                        }, 9000)
+                         setTimeout(function () {
+                             $this.find('.button').animate({opacity: 0}, 300);
+                             setTimeout(function () {
+                                 $this.find('.msg-wrapper').animate({opacity: 1, zIndex: 99}, 300)
+                             }, 600)
+                         }, 5000);
+                         setTimeout(function () {
+                             $this.find('.msg-wrapper').animate({opacity: 0, zIndex: 0});
+                             setTimeout(function () {
+                                 $this.find('.fail-msg').animate({opacity: 1, zIndex: 99})
+                             }, 1000)
+                         }, 8000);
+                         setTimeout(function () {
+                             var scene3 = $this.siblings('.scene-3');
+                             scene3.removeClass('hide').addClass('animated fadeIn');
+                             setTimeout(function () {
+                                 scene3.find('.logo').addClass('go');
+                                 sound.play();
+                                 setTimeout(function () {
+                                     $this.parent().find('.nextpage').css({display: 'block'});
+                                     flag = true
+                                 }, 30)
+                             }, 700)
+                         }, 9000)
                     })
                 }, 2000)
             }
@@ -218,23 +229,70 @@ $(function () {
             } else if (index === 3) {
                 console.log('场景3');
                 setTimeout(function () {
-                    $('.swiper-slide').eq(index).find('.scene-1 .next').addClass('active');
+                    $('.swiper-slide').eq(index).find('.button-wrapper').addClass('active');
                     setTimeout(function () {
+                        $('.swiper-slide').eq(index).find('.scene-1 .next').addClass('active');
                         $('.swiper-slide').eq(index).find('.scene-1 .next span').each(function (i, v) {
                             setTimeout(function () {
                                 $(v).addClass('show')
                             }, 150 * (i + 1))
                         })
-                    }, 300);
-                }, 1200);
-                $('.four .button-wrapper .button').on('click', function () {
-                    var $this = $(this).parent();
-                    $this.siblings('.scene-1').find('.left').css({display: 'none'});
-                    $this.siblings('.scene-1').find('.right').addClass('remove');
+                    }, 100);
                     setTimeout(function () {
-                        $this.siblings('.scene-2').find('.cup').addClass('rotate');
-                    }, 5000);
-                })
+                        setTimeout(function () {
+                            $('.four .button-wrapper .button').on('click', function () {
+                                var $this = $(this).parent();
+                                $(this).attr('disabled', 'disabled');
+                                $this.removeClass('active');
+                                var word2 = $this.siblings('.scene-1').find('.word-wrapper-2');
+                                setTimeout(function () {
+                                    word2.addClass('active').find('span').each(function (i, v) {
+                                        setTimeout(function () {
+                                            $(v).addClass('show')
+                                        }, 150 * (i + 1))
+                                    });
+                                }, 300);
+                                $this.siblings('.scene-1').find('.left').css({display: 'none'});
+                                $this.siblings('.scene-1').find('.right').addClass('remove');
+                                setTimeout(function () {
+                                    $this.siblings('.scene-2').removeClass('hide').addClass('animated fadeIn')
+                                }, 4000);
+                                setTimeout(function () {
+                                    $this.siblings('.scene-2').find('.cup').addClass('rotate');
+                                    setTimeout(function () {
+                                        $this.siblings('.scene-2').find('.water').animate({opacity: 1}, 400);
+                                    }, 1400)
+                                }, 5000);
+                                 setTimeout(function () {
+                                     $this.find('.button').animate({opacity: 0}, 300);
+                                     setTimeout(function () {
+                                         $this.find('.msg-wrapper').animate({opacity: 1, zIndex: 99}, 300)
+                                     }, 600)
+                                 }, 5000);
+                                 setTimeout(function () {
+                                     $this.find('.msg-wrapper').animate({opacity: 0, zIndex: 0});
+                                     setTimeout(function () {
+                                         $this.find('.fail-msg').animate({opacity: 1, zIndex: 99})
+                                     }, 1000)
+                                 }, 8000);
+                                 setTimeout(function () {
+                                     var scene3 = $this.siblings('.scene-3');
+                                     scene3.removeClass('hide').addClass('animated fadeIn');
+                                     setTimeout(function () {
+                                         scene3.find('.logo').addClass('go');
+                                         sound.play();
+                                         setTimeout(function () {
+                                             $this.parent().find('.nextpage').css({display: 'block'});
+                                             flag = true
+                                         }, 30)
+                                     }, 700)
+                                 }, 9000)
+                            })
+                        }, 1000)
+                    }, 0);
+                },2000)
+
+
             } else if (index === 4) {
                 console.log('场景4');
                 setTimeout(function () {
@@ -250,7 +308,9 @@ $(function () {
                 setTimeout(function () {
                     $('.swiper-slide').eq(index).find('.button-wrapper').addClass('active');
                     $('.swiper-slide').eq(index).find('.button-wrapper .button').on('click', function () {
+                        $(this).attr('disabled', 'disabled');
                         var $this = $(this).parent();
+                        $this.removeClass('active');
                         setTimeout(function () {
                             $this.siblings('.scene-2').removeClass('hide').addClass('animated fadeIn');
                             setTimeout(function () {
@@ -289,8 +349,9 @@ $(function () {
                                 scene3.find('.logo').addClass('go');
                                 sound.play();
                                 setTimeout(function () {
-                                    $this.parent().find('.nextpage').css({display: 'block'})
-                                }, 400)
+                                    $this.parent().find('.nextpage').css({display: 'block'});
+                                    flag = true
+                                }, 30)
                             }, 700);
                         }, 10000);
                     })
@@ -307,19 +368,19 @@ $(function () {
                     $('.six .wilful').on('click', function () {
                         isShare = true;
                         $('.dir_wrap').css('display', 'block');
-                        $('.dir_wrap').animate({opacity: 1}, 1000);
+                        $('.dir_wrap').animate({opacity: 0.9}, 400);
                     });
                     setTimeout(function () {
                         if (isShare === false) {
                             $('.dir_wrap').css('display', 'block');
-                            $('.dir_wrap').animate({opacity: 1}, 1000);
+                            $('.dir_wrap').animate({opacity: 0.9}, 400);
                         }
                     }, 6000);
                     $('.dir_wrap').click(function () {
-                        $('.dir_wrap').animate({"opacity": 0}, 1000);
+                        $('.dir_wrap').animate({"opacity": 0}, 400);
                         setTimeout(function () {
                             $('.dir_wrap').hide()
-                        }, 1000)
+                        }, 400)
                     })
                 }
             }
