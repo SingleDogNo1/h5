@@ -65,7 +65,7 @@ $(function () {
                     wx.onMenuShareTimeline({
                         link: 'http://h5.dpandora.cn/index.html',
                         imgUrl: 'http://h5.dpandora.cn/images/credit-share-icon.png',
-                        title: '老铁是不是真的铁，来模拟借次钱就知道了 ',
+                        title: '老铁是不是真的铁，借次钱就知道了 ',
                         success: function () {
                         },
                         cancel: function () {
@@ -74,7 +74,8 @@ $(function () {
                     wx.onMenuShareAppMessage({
                         link: 'http://h5.dpandora.cn/index.html',
                         imgUrl: 'http://h5.dpandora.cn/images/credit-share-icon.png',
-                        title: '老铁是不是真的铁，来模拟借次钱就知道了 ',
+                        title: '老铁是不是真的铁，借次钱就知道了 ',
+                        desc: '有胆你就来',
                         type: '',
                         dataUrl: '',
                         success: function () {
@@ -85,7 +86,8 @@ $(function () {
                     wx.onMenuShareQQ({
                         link: 'http://h5.dpandora.cn/index.html',
                         imgUrl: 'http://h5.dpandora.cn/images/credit-share-icon.png',
-                        title: '老铁是不是真的铁，来模拟借次钱就知道了 ',
+                        title: '老铁是不是真的铁，借次钱就知道了 ',
+                        desc: '有胆你就来',
                         success: function () {
                         },
                         cancel: function () {
@@ -94,7 +96,8 @@ $(function () {
                     wx.onMenuShareWeibo({
                         link: 'http://h5.dpandora.cn/index.html',
                         imgUrl: 'http://h5.dpandora.cn/images/credit-share-icon.png',
-                        title: '老铁是不是真的铁，来模拟借次钱就知道了 ',
+                        title: '老铁是不是真的铁，借次钱就知道了 ',
+                        desc: '有胆你就来',
                         success: function () {
                         },
                         cancel: function () {
@@ -103,8 +106,8 @@ $(function () {
                     wx.onMenuShareQZone({
                         link: 'http://h5.dpandora.cn/index.html',
                         imgUrl: 'http://h5.dpandora.cn/images/credit-share-icon.png',
-                        title: '老铁是不是真的铁，来模拟借次钱就知道了 ',
-                        desc: '老铁是不是真的铁，来模拟借次钱就知道了 ',
+                        title: '老铁是不是真的铁，借次钱就知道了 ',
+                        desc: '有胆你就来',
                         success: function () {
                         },
                         cancel: function () {
